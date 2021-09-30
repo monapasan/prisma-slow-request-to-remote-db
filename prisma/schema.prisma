@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Context {
+  id          Int         @id @default(autoincrement())
+  contextName String
+  createdAt   DateTime    @default(now())
+  statements  Statement[]
+}
+
+model Statement {
+  id        Int      @id @default(autoincrement())
+  content   String
+  context   Context  @relation(fields: [contextId], references: [id], onDelete: Cascade)
+  contextId Int
+  createdAt DateTime @default(now())
+}
