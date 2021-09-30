@@ -10,6 +10,8 @@ Send the example query to this endpoint: localhost:3000/context
 
 You can find an example request [here](https://gist.github.com/monapasan/adb95a22a8286b22897092934e81683e).
 
+When running this query in DEBUG=* mode, then I receive following [output](https://gist.github.com/monapasan/fa101284270e5e2c522d75b635703872)
+
 ## Installation
 
 ```bash
