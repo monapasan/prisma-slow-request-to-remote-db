@@ -7,7 +7,7 @@ import {
   ValidationPipe,
   Controller,
 } from '@nestjs/common';
-import { ContextService } from './context.prisma.service';
+import { ContextService } from './context.service';
 import { ContextsRO, ContextRO } from './context.interface';
 import { CreateContextDto } from './context.dto';
 

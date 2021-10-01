@@ -1,4 +1,5 @@
-import { Context, Statement } from '@prisma/client';
+import { Context } from '../model/context.entity';
+import { Statement } from '../model/statement.entity';
 
 export interface ContextRO {
   context: Context & { statements?: Statement[] };
